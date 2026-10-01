@@ -1,141 +1,213 @@
-# ☕ Cinnamon Cafe & Restro — Interactive Web Application & Digital Menu
+# 🌟 Cinnamon Cafe & Restro — Interactive Digital Dining Platform
 
-[![Website Status](https://img.shields.io/badge/Status-Active%20%26%20Live%20Ready-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://github.com/abrarafridi856/project)
-[![Rating](https://img.shields.io/badge/Google%20Rating-4.4%20%E2%98%85%20(167%2B%20Reviews)-F4B400?style=for-the-badge&logo=google&logoColor=white)](https://maps.google.com/?q=Cinnamon+Cafe+%26+Restro+Station+Rd+near+Eye+Cure+Sribhumi+Assam+788711)
-[![Technology](https://img.shields.io/badge/Tech-Vanilla%20HTML5%20%7C%20CSS3%20%7C%20JS%20ES6+-E34F26?style=for-the-badge&logo=javascript&logoColor=white)](https://github.com/abrarafridi856/project)
-[![WhatsApp Ordering](https://img.shields.io/badge/Order-WhatsApp%20Integration-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/919401848694)
+[![License: MIT](https://img.shields.io/badge/License-MIT-amber.svg)](https://opensource.org/licenses/MIT)
+[![Deploy with Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)](https://vercel.com/new)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/abrarafridi856/project)
+[![Location](https://img.shields.io/badge/Location-Sribhumi%2C%20Assam-orange?logo=googlemaps)](https://maps.google.com/?q=Cinnamon+Cafe+%26+Restro+Station+Rd+near+Eye+Cure+Sribhumi+Assam+788711)
 
-> **"Where Warm Aromas Meet Evening Elegance."**  
-> A premium, high-performance, mobile-first web experience and digital menu ordering system tailored specifically for **Cinnamon Cafe & Restro**, located on Station Road, Sribhumi (Karimganj), Assam.
-
----
-
-## 🌟 Project Motivation & Background
-
-**Cinnamon Cafe & Restro** is one of Sribhumi's premier dining destinations — celebrated for its distinct dual ambiance:
-- ☀️ **By Day:** A bustling, sunlit coffee retreat serving artisanal brews, sandwiches, creamy pasta, and quick bites for casual work sessions, dates, and friendly gatherings.
-- 🌙 **By Night:** An elegant, ambient restro serving authentic clay-pot dum biryanis, tandoori breads, rich Indian curries, sizzlers, Chinese gravies, and hosting private birthday parties.
-
-### Why this Web Application was Built:
-1. **Complete Menu Digitization**: Accurately transcribed all **120+ dishes and beverages** across 10 authentic printed menu pages (Momos, Pizzas, Biryanis, Pastas, Starters, Shakes, Mojitos & Desserts) with exact pricing (₹15 – ₹360).
-2. **Frictionless WhatsApp Ordering (My Plate Tray)**: Allowed guests to customize dishes, view subtotal breakdowns, choose order purpose (*Dine-In*, *Takeaway*, or *Home Delivery*), and transmit formatted orders straight to the restaurant's WhatsApp without third-party commission apps.
-3. **Owner Photo Upload Studio**: Empowered restaurant owners to directly upload, categorize, and manage fresh dish and event photos right into the live photo gallery using secure PIN authorization.
-4. **Dynamic Day/Night Mood Switcher**: Visualized the transition between daytime cafe vibes and evening dining ambiance with real-time CSS theme swapping.
-5. **Zero Dependency & Lightning Speed**: Built in pure modern Vanilla web standards (HTML5, Modern CSS Variables, Modular JS) ensuring instantaneous 100/100 Lighthouse performance and zero build configuration hurdles.
+> **"Nestled in the heart of the town, Cinnamon Cafe & Restro offers the perfect blend of taste and elegance — a bustling cafe by day, an ambient restro retreat by night."**
 
 ---
 
-## 🍽️ Complete Digital Menu Structure (120+ Authentic Dishes)
+## 📖 Table of Contents
+- [🎯 Motivation & Project Vision](#-motivation--project-vision)
+- [✨ Key Interactive Features](#-key-interactive-features)
+- [🍽️ Complete Digital Menu (120+ Items)](#️-complete-digital-menu-120-items)
+- [🛠️ Tech Stack & Architecture](#️-tech-stack--architecture)
+- [🚀 Quick Start & Local Setup](#-quick-start--local-setup)
+- [🌐 Live Deployment Guide (Vercel & GitHub)](#-live-deployment-guide-vercel--github)
+- [📱 WhatsApp Order Integration Format](#-whatsapp-order-integration-format)
+- [👑 Restaurant Owner Studio](#-restaurant-owner-studio)
+- [📍 Restaurant Details & Contact](#-restaurant-details--contact)
 
-The website features full digital categorization transcribed directly from the restaurant's physical menu booklet:
+---
+
+## 🎯 Motivation & Project Vision
+
+Traditional physical menu booklets are static, easily worn out, and don't provide customers with interactive pricing calculations, dietary filtration, or immediate digital pre-ordering. 
+
+The goal of this project is to build a **state-of-the-art, hyper-responsive digital web platform** for **Cinnamon Cafe & Restro** (located at Station Road, Sribhumi, Assam) that:
+1. **Transcribes 100% of the authentic restaurant printed menu** into a fast, interactive digital catalog with instant search and dietary filters (Veg / Non-Veg / Chef's Choice).
+2. **Eliminates order friction** through a built-in **"Order Plate" / Tray** that calculates the bill in real-time and formats a structured order dispatched straight to the restaurant's official WhatsApp line (`094018 48694`).
+3. **Showcases the Day vs. Night dual ambiance** with a 1-click **Mood Toggle** (Daytime Warm Cafe vs. Evening Restro Ambiance).
+4. **Empowers the restaurant owner** with a secure **Owner Studio** to upload and manage cafe food and interior photos directly from mobile or desktop with automated client-side image compression and persistence.
+5. **Preserves authenticity** by providing full-resolution scans of the physical menu book in a sleek, full-screen image lightbox.
+
+---
+
+## ✨ Key Interactive Features
+
+### ☀️🌙 1. Day / Night Mood Switcher
+- Instant toggle between **☀️ Daytime Cafe Vibe** (warm honey & cream aesthetic) and **🌙 Evening Restro Vibe** (candlelit obsidian & dark cinnamon glow).
+- Preferences are automatically preserved across sessions using `localStorage`.
+
+### 🥟🍕 2. 120+ Item Dynamic Menu with Instant Search
+- **Category Tabs**: 12 dedicated sections (*Momo, Burgers & Sandwiches, Kati Rolls, Pizza, Noodles & Pasta, Starters & Soups, Fish & Prawn, Biryani & Rice, Gravy & Main Course, Indian Breads, Beverages & Shakes, Desserts*).
+- **Dietary Filter Buttons**: 🟢 *Pure Veg*, 🔴 *Non-Veg*, ⭐ *Chef's Choice*.
+- **Real-Time Search Bar**: Instant debounced search querying dish names, ingredients, and categories.
+
+### 🍽️📲 3. Live Food Plate Tray & WhatsApp Order Dispatch
+- 1-Click **"Add to Plate"** button on every single dish card.
+- Floating Cart button (FAB) with animated item counter badges.
+- Slide-up interactive modal to increment/decrement quantities, select order type (*Dine-In*, *Takeaway*, or *Home Delivery*), and input customer name & table/address.
+- Generates a beautifully formatted WhatsApp payload sent directly to `+91 94018 48694`.
+
+### 📊 4. Simulated Google Popular Times & Live Hours Widget
+- Interactive hourly bar chart based on actual dining trends in Sribhumi.
+- Real-time **Open / Closed clock calculation** (Mon–Sun 10:30 AM to 11:00 PM).
+- Dynamic busy indicator based on current local time.
+
+### 🖼️ 5. Authentic Photo Gallery & HD Lightbox
+- High-definition gallery showcasing dining hall ambiance, signature dishes, celebration zones, and **original printed menu booklet scans**.
+- Fullscreen modal lightbox with smooth backdrop blur and keyboard `Esc` closing.
+
+### ⭐ 6. Customer Review Submission System
+- Interactive 5-star rating selector and review form.
+- Real-time dynamic appending of new customer reviews with toast notifications.
+
+### 👑 7. Restaurant Owner Photo Studio
+- PIN-protected authentication screen (Default Demo PIN: `1234`).
+- Drag-and-drop file upload with client-side canvas compression (`max 1200px`, JPEG quality `0.82`) for ultra-fast load times.
+- Management tab to delete and organize custom uploaded restaurant snapshots.
+
+---
+
+## 🍽️ Complete Digital Menu (120+ Items)
+
+| Category | Highlights & Included Items | Price Range |
+| :--- | :--- | :--- |
+| **🥟 Momo** | Veg & Chicken Steamed, Fried, Pan-Fried, Cheese Momo, Kurkure Momo, Jhul Momo, Combo Platter | ₹80 – ₹250 |
+| **🍔 Burgers & Sandwiches** | Veg/Chicken Burgers, Fried Chicken Burger, Paneer Grilled Sandwich, Cheese Corn, Chicken Club Sandwich | ₹80 – ₹160 |
+| **🌯 Kati Rolls** | Egg Kati Roll, Paneer Kati Roll, Chicken Kati Roll, Egg Chicken Kathi Roll | ₹80 – ₹130 |
+| **🍕 Pizzas** | Margherita, Farmhouse, Cheese & Corn, Deluxe Veggie, Paneer Tikka, Chicken Tikka, Overloaded, Cinnamon Special Pizza | ₹150 – ₹300 |
+| **🍝 Noodles & Pasta** | Veg/Chicken Hakka, Schezwan, Chilli Garlic, Butter Garlic, American Chopsuey, White & Red Sauce Pasta (Veg/Non-Veg) | ₹80 – ₹180 |
+| **🥗 Starters & Soups** | Paneer Tikka, Chilli Paneer (Dry), Peri-Peri Fries, Honey Garlic Paneer, Crispy Chilli Babycorn, Manchow & Hot & Sour Soups | ₹80 – ₹160 |
+| **🦐 Fish & Prawn** | Fish Finger, Chilli Fish Dry Fry, Prawn Dry Fry, Hot Garlic Chilli Prawn | ₹200 – ₹280 |
+| **🍚 Biryani & Rice** | Chicken, Paneer, Mutton Biryani (Mini/Full), Chicken Dum Biryani, Mutton Dum Biryani, Jeera Rice, Schezwan & Fried Rice | ₹60 – ₹360 |
+| **🍲 Gravy & Curries** | Matar Paneer, Kadhai Paneer, Paneer Lababdar, Paneer Butter Masala, Shahi Paneer, Mushroom Malai Masala, Chilli Chicken, Manchurian Gravies | ₹130 – ₹250 |
+| **🫓 Indian Breads** | Plain Roti, Butter Roti, Plain Naan, Butter Naan, Butter Garlic Naan, Laccha Paratha | ₹15 – ₹80 |
+| **☕ Shakes, Coffee & Drinks** | Hot/Black Coffee, Latte, Cappuccino, Cold Coffee, Mango Lassi, Oreo Shake, Fresh Juices, Virgin/Chilli Guava/Blueberry Mojitos | ₹40 – ₹130 |
+| **🍨 Desserts** | Ice Cream, Gulab Jamun | ₹40 – ₹60 |
+
+---
+
+## 🛠️ Tech Stack & Architecture
 
 ```
-├── 🥟 Momo (10 items)             -> Steamed, Fried, Pan-Fried, Cheese Chicken Momo, Kurkure Momo, Jhul Momo, Combo Platter
-├── 🍔 Burgers & Sandwiches (8)    -> Veg/Chicken Burgers, Fried Chicken Burger, Paneer Grilled Sandwich, Club Sandwich
-├── 🌯 Kati Rolls (4)              -> Egg Kati Roll, Paneer Kati Roll, Chicken Kati Roll, Egg Chicken Kathi Roll
-├── 🍕 Pizza (8)                   -> Margherita, Farmhouse, Cheese & Corn, Deluxe Veggie, Paneer & Chicken Tikka, Cinnamon Special
-├── 🍝 Noodles & Pasta (16)        -> Schezwan, Hakka, Butter Garlic, American Chopsuey, Creamy White Sauce & Red Sauce Pasta
-├── 🥗 Veg Starters & Soups (18)   -> Paneer Tikka, Peri-Peri Fries, Crispy Chilli Babycorn, Honey Garlic Paneer, Manchow & Hot & Sour Soups
-├── 🦐 Fish & Prawn (4)            -> Fish Finger, Chilli Fish Dry Fry, Prawn Dry Fry, Hot Garlic Chilli Prawn
-├── 🍚 Biryani & Rice (19)         -> Royal Chicken Dum Biryani, Mutton Dum Biryani, Paneer Biryani, Schezwan & Fried Rice
-├── 🍲 Gravy & Main Course (14)    -> Matar Paneer, Kadhai Paneer, Shahi Paneer, Mushroom Malai Masala, Chilli Chicken, Manchurian
-├── 🫓 Indian Breads (6)           -> Tandoori Butter Roti, Plain Naan, Butter Garlic Naan, Laccha Paratha
-├── ☕ Coffee, Shakes & Drinks (27) -> Espresso, Latte, Cold Coffee, Mango Lassi, Oreo Shake, Fresh Juices, Virgin/Guava/Blueberry Mojitos
-└── 🍨 Desserts (2)                -> Ice Cream Scoops, Warm Gulab Jamun
+project/
+├── index.html          # Semantic HTML5 Structure with SEO Optimization
+├── styles.css          # Vanilla CSS Design System with Glassmorphism & Themes
+├── app.js              # State Management, Menu Rendering, Cart & WhatsApp Logic
+├── .gitignore          # Git exclusion rules
+├── README.md           # Documentation & Deployment Guide
+├── images/             # High resolution restaurant assets & dish photography
+└── unnamed*.webp       # Authentic printed menu scans (Pages 02 - 13)
+```
+
+- **Frontend**: Vanilla HTML5, Modern CSS3 (Variables, Glassmorphism, CSS Grid, Flexbox), Vanilla ES6+ JavaScript.
+- **Iconography & Typography**: FontAwesome 6.4.0, Google Fonts (*Outfit* and *Plus Jakarta Sans*).
+- **State Management**: Reactive in-memory state with automatic `localStorage` persistence for Cart, Theme, and Custom Photos.
+- **Zero Build Step**: Fully static, high-performance architecture capable of running on any static host with sub-second load times.
+
+---
+
+## 🚀 Quick Start & Local Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/abrarafridi856/project.git
+cd project
+```
+
+### 2. Run locally in any browser
+You can open `index.html` directly in your browser, or start a local lightweight web server:
+
+**Using Python:**
+```bash
+python -m http.server 8080
+```
+Then visit: `http://localhost:8080`
+
+**Using Node / `npx serve`:**
+```bash
+npx serve .
 ```
 
 ---
 
-## 🚀 Key Interactive Systems & Feature Highlights
+## 🌐 Live Deployment Guide (Vercel & GitHub)
 
-| Feature Module | Functionality & Implementation Details |
-| :--- | :--- |
-| 🌓 **Day & Night Mood Engine** | Live theme toggle (`body[data-theme]`) with smooth color-palette transitions, glowing cinnamon accents, and persistent `localStorage` preference. |
-| 🔍 **Real-Time Menu Search & Filter** | Instant multi-condition query engine filtering 120+ dishes by keyword, dietary preference (All, Pure Veg, Non-Veg, Chef's Choice), and category tabs. |
-| 🛒 **Interactive "My Plate" Tray** | Cart drawer supporting item increments, decrements, subtotal calculation, order type selection (*Dine-In / Takeaway / Delivery*), and 1-click WhatsApp order generator. |
-| 📸 **Interactive Photo Gallery & Lightbox** | Multi-category gallery with modal zoom lightbox, including high-resolution scans of the authentic printed menu book pages. |
-| 🔐 **Owner Restaurant Photo Studio** | PIN-protected portal (`PIN: 1234`) enabling restaurant staff to drag-and-drop or browse new photos, assign categories, write captions, and publish directly to the live gallery. |
-| ⭐ **Live Review Engine** | Verified diner review showcase with an interactive 5-star submission modal that saves feedback locally and renders new testimonial cards in real time. |
-| 📊 **Simulated Google Popular Times** | Interactive day-of-the-week switcher showing simulated peak visiting hours and typical visit durations. |
-| 📱 **Adaptive Mobile Experience** | Responsive slide-out navigation drawer, sticky floating action buttons (Direct Call, WhatsApp, Cart Plate, Scroll-to-top). |
+### Option A: 1-Command Deployment with Vercel CLI
+You can deploy this project live to Vercel instantly without any configuration files:
 
----
+```bash
+# 1. Install or run Vercel directly
+npx vercel
 
-## 📁 Repository Structure
-
-```
-├── index.html            # Main semantic HTML5 document with structured JSON-LD data
-├── styles.css            # Comprehensive responsive CSS design system & CSS variables
-├── app.js                # Core interactive JavaScript application logic & state management
-├── images/               # High-resolution curated gallery & ambiance photography
-│   ├── hero_cafe.jpg
-│   ├── signature_pasta.jpg
-│   ├── specialty_coffee.jpg
-│   ├── party_celebration.jpg
-│   ├── sizzler_platter.jpg
-│   └── burger_fastbites.jpg
-├── unnamed*.webp         # High-resolution original scanned pages of the physical menu book
-└── README.md             # Project documentation, motivation, and setup instructions
+# 2. Follow the prompt (Set scope, link project, confirm root directory)
+# 3. For production release:
+npx vercel --prod
 ```
 
----
-
-## 🛠️ Technology Stack & Design Architecture
-
-- **Markup**: Semantic HTML5 with Schema.org Restaurant Microdata for local SEO optimization.
-- **Styling**: Vanilla CSS3 using custom properties (Design Tokens), Flexbox, CSS Grid, Glassmorphism backdrop filters, and CSS keyframe micro-animations.
-- **Typography**: Google Fonts (`Outfit`, `Playfair Display`, `Plus Jakarta Sans`).
-- **Icons**: Font Awesome 6.5.1 Pro Iconography CDN.
-- **Logic**: Vanilla ES6+ JavaScript with dynamic DOM rendering, event delegation, and Web Storage API (`localStorage`).
-- **External Dependencies**: **Zero runtime JavaScript frameworks** — no build tools, bundlers, or heavy node_modules needed!
-
----
-
-## 💻 How to Run Locally
-
-1. **Clone the repository**:
+### Option B: Deploying via GitHub to Vercel
+1. Push this repository to your GitHub account:
    ```bash
-   git clone https://github.com/abrarafridi856/project.git
-   cd project
+   git add .
+   git commit -m "Deploy latest Cinnamon digital platform"
+   git push origin main
    ```
-
-2. **Run in any browser**:
-   - Simply double click `index.html` to open it in your default web browser, or
-   - Start a lightweight local development server:
-     ```bash
-     # Python 3
-     python -m http.server 8080
-     ```
-   - Open your browser and navigate to `http://localhost:8080`.
+2. Go to [Vercel Dashboard](https://vercel.com/new).
+3. Import your GitHub repository (`abrarafridi856/project`).
+4. Click **Deploy** — Vercel will automatically assign a live production URL (e.g., `https://cinnamon-cafe-restro.vercel.app`).
 
 ---
 
-## 🌐 Deploy to Live Hosting (Free 1-Click Methods)
+## 📱 WhatsApp Order Integration Format
 
-### Option 1: GitHub Pages (Recommended)
-1. In your GitHub repository (`https://github.com/abrarafridi856/project`), go to **Settings** → **Pages**.
-2. Under **Build and deployment** → **Source**, select **Deploy from a branch**.
-3. Set Branch to `main` and folder to `/(root)`, then click **Save**.
-4. Your website will be live in ~60 seconds at `https://abrarafridi856.github.io/project/`.
+When a customer builds their order tray and clicks **"Send Order on WhatsApp"**, the application automatically structures an itemized bill:
 
-### Option 2: Vercel or Netlify
-1. Import your GitHub repository to [Vercel](https://vercel.com) or [Netlify](https://netlify.com).
-2. Leave build settings empty (as it is pure static HTML/CSS/JS).
-3. Click **Deploy**.
+```text
+*🌟 NEW ORDER - CINNAMON CAFE & RESTRO 🌟*
+
+*Order Type:* Dine-In / Pre-cook
+*Customer Name:* Joydeep
+*Table / Address:* Table 4
+
+*--- Order Items ---*
+1. Chicken Dum Biryani (Full) x 2 = ₹480
+2. Cinnamon Special Pizza x 1 = ₹300
+3. Virgin Mojito x 2 = ₹160
+
+*Total Amount:* ₹940
+*Restaurant Contact:* 094018 48694 (Station Rd, Sribhumi)
+
+Please confirm my order and approximate prep time. Thank you!
+```
+
+---
+
+## 👑 Restaurant Owner Studio
+
+The built-in Owner Studio is accessible via the **"Owner Studio"** buttons in the header, photo gallery, and footer.
+
+- **Default Access PIN**: `1234`
+- **Alternative Admin PINs**: `admin` or `0940`
+- **Features**:
+  - Live photo upload with automatic image scaling and quality optimization.
+  - Category tagging (*Ambiance, Food, Events, Exterior*).
+  - Deletion and management of published custom photos.
 
 ---
 
 ## 📍 Restaurant Details & Contact
 
-- **Restaurant**: Cinnamon Cafe & Restro
-- **Address**: Station Rd, near Eye Cure, opp. Vikash Textile, Sribhumi (Karimganj), Assam 788711
-- **Phone**: [+91 94018 48694](tel:09401848694)
-- **WhatsApp**: [+91 94018 48694](https://wa.me/919401848694)
-- **Hours**: Monday – Sunday: 10:30 AM – 11:00 PM
-- **Average Spend**: ₹200 – ₹400 per person
+- **Restaurant**: **Cinnamon Cafe & Restro**
+- **Address**: Station Rd, near Eye Cure, opp. Vikash Textile, Sribhumi, Assam 788711
+- **Phone**: [`094018 48694`](tel:09401848694)
+- **WhatsApp**: [`+91 94018 48694`](https://wa.me/919401848694)
+- **Timings**: Monday – Sunday: `10:30 AM – 11:00 PM`
+- **Price Range**: ₹200 – ₹400 per person
 
 ---
 
-<div align="center">
-  <sub>Crafted with passion for <strong>Cinnamon Cafe & Restro</strong>. © 2026 All Rights Reserved.</sub>
-</div>
+*Crafted with ❤️ for Cinnamon Cafe & Restro, Sribhumi.*

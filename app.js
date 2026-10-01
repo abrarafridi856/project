@@ -2197,14 +2197,18 @@ function setupGalleryLightbox() {
     });
   }
 
-  // Allow closing modal and lightbox via Escape key
+  // Allow closing any modal, drawer, or lightbox via Escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeLightbox();
       const ownerModal = document.getElementById("ownerUploadModal");
-      if (ownerModal && ownerModal.classList.contains("active")) {
-        ownerModal.classList.remove("active");
-      }
+      if (ownerModal) ownerModal.classList.remove("active");
+      const cartModal = document.getElementById("cartModal");
+      if (cartModal) cartModal.classList.remove("active");
+      const reviewModal = document.getElementById("addReviewModal");
+      if (reviewModal) reviewModal.classList.remove("active");
+      const drawer = document.getElementById("mobileDrawer");
+      if (drawer) drawer.classList.remove("open");
     }
   });
 }
@@ -2215,6 +2219,8 @@ function setupGalleryLightbox() {
 function setupOwnerPhotoStudio() {
   const modal = document.getElementById("ownerUploadModal");
   const openBtn = document.getElementById("openOwnerUploadBtn");
+  const topOwnerBtn = document.getElementById("topOwnerUploadBtn");
+  const footerOwnerBtn = document.getElementById("footerOwnerUploadBtn");
   const closeBtn = document.getElementById("closeOwnerModalBtn");
   const pinForm = document.getElementById("ownerPinForm");
   const pinInput = document.getElementById("ownerPinInput");
@@ -2257,6 +2263,8 @@ function setupOwnerPhotoStudio() {
   };
 
   if (openBtn) openBtn.addEventListener("click", openModal);
+  if (topOwnerBtn) topOwnerBtn.addEventListener("click", openModal);
+  if (footerOwnerBtn) footerOwnerBtn.addEventListener("click", openModal);
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (modal) {
     modal.addEventListener("click", (e) => {
