@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinnamon Cafe & Restro | Premium Cafe & Dining in Sribhumi, Assam</title>
+  <meta name="description" content="Cinnamon Cafe & Restro - Sribhumi's favorite spot for artisan coffee, creamy pasta, sizzling platters, all-you-can-eat deals, and memorable kids' birthday celebrations. Station Rd, Sribhumi.">
+  <meta name="keywords" content="Cinnamon Cafe, Cinnamon Cafe & Restro, Sribhumi cafe, Karimganj restaurant, birthday party cafe, best pasta in Sribhumi, coffee shop Sribhumi, all you can eat Assam">
+  <meta name="author" content="Cinnamon Cafe & Restro">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="Cinnamon Cafe & Restro | Sribhumi, Assam">
+  <meta property="og:description" content="By day a vibrant coffee sanctuary, by night an elegant dining retreat. Rated 4.4★ on Google. Station Rd, near Eye Cure, Sribhumi.">
+  <meta property="og:image" content="images/hero_cafe.jpg">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org Restaurant Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Cinnamon Cafe & Restro",
+    "image": "images/hero_cafe.jpg",
+    "telephone": "+919401848694",
+    "priceRange": "₹200 - ₹400",
+    "servesCuisine": ["Cafe", "Continental", "Italian", "Chinese", "Fast Food", "Desserts", "Beverages"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Station Rd, near Eye Cure, opp. Vikash Textile",
+      "addressLocality": "Sribhumi",
+      "addressRegion": "Assam",
+      "postalCode": "788711",
+      "addressCountry": "IN"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "reviewCount": "167",
+      "bestRating": "5"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:30",
+        "closes": "23:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-theme="evening">
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-left-info">
+        <span class="live-pill" id="liveStatusPill"><span class="pulse-dot"></span> Open Now · Closes 11 PM</span>
+        <span class="top-divider">|</span>
+        <span class="live-busy-pill"><i class="fa-solid fa-users"></i> Popular: <span id="liveBusyStatus">Usually 10-15m wait</span></span>
+      </div>
+      <div class="top-right-links">
+        <a href="tel:09401848694" class="top-contact-link"><i class="fa-solid fa-phone-volume"></i> 094018 48694</a>
+        <span class="top-divider">|</span>
+        <span class="top-address"><i class="fa-solid fa-location-dot"></i> Station Rd, Sribhumi</span>
+        <span class="top-divider">|</span>
+        <!-- Owner Studio Direct Trigger -->
+        <button class="top-owner-btn" id="topOwnerUploadBtn" title="Restaurant Owner Studio">
+          <i class="fa-solid fa-camera"></i> <span>Owner Studio</span>
+        </button>
+        <span class="top-divider">|</span>
+        <!-- Day / Night Mood Swapper -->
+        <button class="mood-toggle-btn" id="moodToggleBtn" title="Switch Day Cafe / Evening Restro Vibe">
+          <i class="fa-solid fa-moon"></i> <span id="moodLabel">Evening Restro</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">CINNAMON</span>
+          <span class="brand-sub">CAFE & RESTRO</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">Our Story</a>
+        <a href="#menu" class="nav-link">Menu & Specials</a>
+        <a href="#experience" class="nav-link">Day & Night Vibe</a>
+        <a href="#birthday-events" class="nav-link">Birthday & Parties <span class="badge-tag">Hot</span></a>
+        <a href="#gallery" class="nav-link">Ambiance</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Find Us</a>
+      </nav>
+
+      <!-- Nav CTA Actions -->
+      <div class="nav-actions">
+        <!-- Cart / Plate Trigger -->
+        <button class="cart-btn" id="cartToggleBtn" aria-label="View Selected Items">
+          <i class="fa-solid fa-utensils"></i>
+          <span class="cart-label">My Plate</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+
+        <a href="tel:09401848694" class="btn btn-primary" id="headerCallBtn">
+          <i class="fa-solid fa-phone"></i> Call Cafe
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text">
+        <span class="brand-title">CINNAMON</span>
+        <span class="brand-sub">CAFE & RESTRO</span>
+      </div>
+      <button class="close-drawer-btn" id="closeDrawerBtn">&times;</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="#about" class="mob-link">Our Story</a>
+      <a href="#menu" class="mob-link">Menu & Food</a>
+      <a href="#experience" class="mob-link">Cafe vs Restro Vibe</a>
+      <a href="#birthday-events" class="mob-link">Birthday & Party Packages</a>
+      <a href="#gallery" class="mob-link">Photo Gallery</a>
+      <a href="#reviews" class="mob-link">Google Reviews</a>
+      <a href="#contact" class="mob-link">Contact & Directions</a>
+      <a href="javascript:void(0)" class="mob-link" id="mobileOwnerUploadBtn" style="color: var(--cinnamon-light);"><i class="fa-solid fa-camera"></i> Owner: Upload Photos</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="https://wa.me/919401848694?text=Hello%20Cinnamon%20Cafe,%20I%20would%20like%20to%20place%20an%20order/inquire." target="_blank" class="btn btn-whatsapp btn-block">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp Order / Inquiry
+      </a>
+      <a href="tel:09401848694" class="btn btn-outline btn-block mt-2">
+        <i class="fa-solid fa-phone"></i> Call 094018 48694
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-badge-pill">
+          <span class="star-pill"><i class="fa-solid fa-star"></i> 4.4</span>
+          <span>167+ Google Reviews</span>
+          <span class="dot-separator">•</span>
+          <span class="social-score"><i class="fa-brands fa-facebook"></i> 5/5</span>
+          <span class="dot-separator">•</span>
+          <span class="social-score">Justdial 5/5</span>
+        </div>
+
+        <h1 class="hero-title">
+          Where Warm Aromas Meet <span class="gradient-text">Evening Elegance.</span>
+        </h1>
+
+        <p class="hero-quote">
+          "Nestled in the heart of the town, Cinnamon Cafe & Restro offers the perfect blend of taste and elegance. By day, it’s a bustling cafe and as the sun sets, the atmosphere shifts to a sophisticated yet relaxed dining experience."
+        </p>
+
+        <!-- Feature Pills -->
+        <div class="hero-features-list">
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-wallet"></i>
+            <div>
+              <strong>₹200 – ₹400</strong>
+              <small>Per Person Affordable Luxury</small>
+            </div>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-cake-candles"></i>
+            <div>
+              <strong>Kids Birthday Specialist</strong>
+              <small>Custom Decor & Party Combos</small>
+            </div>
+          </div>
+          <div class="hero-feature-item">
+            <i class="fa-solid fa-bowl-food"></i>
+            <div>
+              <strong>All You Can Eat Deals</strong>
+              <small>Unlimited Delights & Sizzlers</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-book-open"></i> Explore Full Menu
+          </a>
+          <a href="tel:09401848694" class="btn btn-glass btn-lg" id="heroCallBtn">
+            <i class="fa-solid fa-phone"></i> Call 094018 48694
+          </a>
+          <a href="https://wa.me/919401848694?text=Hello%20Cinnamon%20Cafe,%20I%20would%20like%20to%20place%20an%20order/inquiry." target="_blank" class="btn btn-whatsapp btn-lg">
+            <i class="fa-brands fa-whatsapp"></i> Quick WhatsApp Order
+          </a>
+        </div>
+
+        <!-- Location quick strip -->
+        <div class="hero-location-bar">
+          <div class="loc-item"><i class="fa-solid fa-map-pin"></i> Station Rd, Near Eye Cure, Opp. Vikash Textile, Sribhumi, Assam 788711</div>
+          <div class="loc-item"><i class="fa-solid fa-clock"></i> 10:30 AM – 11:00 PM Daily</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING STATS SECTION -->
+    <section class="stats-ribbon">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-star-half-stroke"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">4.4 / 5.0</span>
+            <span class="stat-desc">167+ Google Verified Reviews</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">500+</span>
+            <span class="stat-desc">Birthdays & Gatherings Hosted</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">65+</span>
+            <span class="stat-desc">Signature Gourmet Recipes</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+          <div class="stat-info">
+            <span class="stat-num">5.0 / 5.0</span>
+            <span class="stat-desc">Facebook & Justdial Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / STORY SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual">
+            <div class="main-image-frame">
+              <img src="images/hero_cafe.jpg" alt="Cinnamon Cafe & Restro Ambiance" class="about-img main-img" id="aboutAmbianceImg">
+              <div class="floating-badge-award">
+                <i class="fa-solid fa-crown"></i>
+                <div>
+                  <strong>Sribhumi's Choice</strong>
+                  <span>Top Rated Cafe & Restro</span>
+                </div>
+              </div>
+            </div>
+            <div class="small-image-frame">
+              <img src="images/specialty_coffee.jpg" alt="Artisan Cinnamon Coffee" class="about-img sub-img">
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="section-sub-title">WELCOME TO OUR SPACE</span>
+            <h2 class="section-title">A Destination of Comfort, Flavor & Elegance</h2>
+            <div class="title-bar"></div>
+            
+            <p class="about-lead">
+              Nestled conveniently on Station Road, Sribhumi (near Eye Cure and opposite Vikash Textile), Cinnamon Cafe & Restro is crafted to be your home away from home.
+            </p>
+            
+            <p class="about-text">
+              Whether you are catching up over an artisan cinnamon latte, having a relaxed work session, savoring our signature creamy white sauce pasta with friends, or gathering the entire family for a grand birthday feast, we bring you unmatched hospitality at friendly prices (₹200–₹400/person).
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="hl-icon"><i class="fa-solid fa-mug-saucer"></i></div>
+                <div>
+                  <h4>Artisanal Coffee & Beverages</h4>
+                  <p>Handcrafted espresso, spiced cinnamon specialty drinks, cold frappes, and refreshing mocktails.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="hl-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                <div>
+                  <h4>Gourmet Multi-Cuisine Dining</h4>
+                  <p>From veggie-loaded Italian pastas to sizzling continental platters and delicious quick bites.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="hl-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div>
+                  <h4>Memorable Celebrations</h4>
+                  <p>Turnkey kid & adult birthday party arrangements with themes, custom balloon arches, music & catering.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-actions">
+              <a href="#menu" class="btn btn-primary">Check Our Menu</a>
+              <a href="#birthday-events" class="btn btn-outline">Explore Party Packages</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DAY TO NIGHT DYNAMIC EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub-title">TWO MOODS, ONE DESTINATION</span>
+          <h2 class="section-title">Daytime Cafe vs. Evening Restro</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle">
+            Experience the dynamic transformation of Cinnamon Cafe & Restro throughout the day.
+          </p>
+        </div>
+
+        <!-- Dual Card Interactive Comparison -->
+        <div class="vibe-comparison-grid">
+          <!-- Day Card -->
+          <div class="vibe-card day-vibe-card">
+            <div class="vibe-card-header">
+              <div class="vibe-badge"><i class="fa-solid fa-sun"></i> BY DAY: BUSTLING CAFE</div>
+              <span class="vibe-time">10:30 AM – 5:00 PM</span>
+            </div>
+            <div class="vibe-img-wrap">
+              <img src="images/specialty_coffee.jpg" alt="Day Cafe Vibe">
+            </div>
+            <div class="vibe-body">
+              <h3>Vibrant, Energetic & Cozy</h3>
+              <p>Warm sunlight, acoustic melodies, the comforting hum of freshly ground espresso, and fresh cinnamon bakes. Perfect for reading, remote work, casual dates, and delightful brunch.</p>
+              <ul class="vibe-list">
+                <li><i class="fa-solid fa-check"></i> Freshly brewed Cinnamon Spice Cappuccinos & Lattes</li>
+                <li><i class="fa-solid fa-check"></i> Creamy loaded pasta, garlic breads & gourmet sandwiches</li>
+                <li><i class="fa-solid fa-check"></i> Free High-Speed Wi-Fi & Cozy booth seating</li>
+              </ul>
+              <button class="btn btn-outline btn-block vibe-action" id="exploreCafeDrinksBtn">Explore Cafe Drinks</button>
+            </div>
+          </div>
+
+          <!-- Night Card -->
+          <div class="vibe-card night-vibe-card">
+            <div class="vibe-card-header">
+              <div class="vibe-badge"><i class="fa-solid fa-moon"></i> BY NIGHT: ELEGANT RESTRO</div>
+              <span class="vibe-time">5:00 PM – 11:00 PM</span>
+            </div>
+            <div class="vibe-img-wrap">
+              <img src="images/sizzler_platter.jpg" alt="Evening Restro Vibe">
+            </div>
+            <div class="vibe-body">
+              <h3>Ambient, Candlelit & Festive</h3>
+              <p>As dusk settles, our space transforms with warm ambient lighting, candle glow, sizzling Continental platters, Chinese delicacies, and celebration music for unforgettable evenings.</p>
+              <ul class="vibe-list">
+                <li><i class="fa-solid fa-check"></i> Steaming hot Sizzler Platters & Chef's Special Mains</li>
+                <li><i class="fa-solid fa-check"></i> Birthday party & family gathering celebration setups</li>
+                <li><i class="fa-solid fa-check"></i> Authentic Tandoori, Dum Biryanis & Rich Indian Gravies</li>
+              </ul>
+              <button class="btn btn-primary btn-block vibe-action" onclick="filterMenuCategory('biryani-rice')">Explore Biryani & Curries</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE HIGHLIGHT DISHES CAROUSEL / SPOTLIGHT -->
+    <section class="section signature-dishes-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub-title">CHEF'S CULINARY SHOWCASE</span>
+          <h2 class="section-title">Crowd Favorites & Signatures</h2>
+          <div class="title-bar center"></div>
+        </div>
+
+        <div class="signature-grid">
+          <!-- Dish 1 -->
+          <div class="sig-card">
+            <div class="sig-img-box">
+              <img src="images/signature_pasta.jpg" alt="Creamy White Sauce Pasta">
+              <span class="tag-bestseller"><i class="fa-solid fa-fire"></i> Most Reviewed</span>
+              <span class="tag-veg">🟢 Pure Veg</span>
+            </div>
+            <div class="sig-content">
+              <div class="sig-title-row">
+                <h3>White Sauce Pasta (Veg)</h3>
+                <span class="sig-price">₹120</span>
+              </div>
+              <p class="sig-desc">Velvety parmesan and herb cream sauce with sautéed mushrooms, bell peppers, and cracked black pepper.</p>
+              <div class="sig-customer-quote">
+                <i class="fa-solid fa-quote-left"></i> "The white sauce pasta was creamy, veggie-loaded, and quite good." — Google Review
+              </div>
+              <button class="btn btn-sm btn-primary add-to-plate-btn" data-id="ps-1" data-name="White Sauce Pasta (Veg)" data-price="120" data-category="noodles-pasta">
+                <i class="fa-solid fa-plus"></i> Add to Plate
+              </button>
+            </div>
+          </div>
+
+          <!-- Dish 2 -->
+          <div class="sig-card">
+            <div class="sig-img-box">
+              <img src="unnamed (2).webp" alt="Cinnamon Special Pizza" style="object-position: center bottom;">
+              <span class="tag-bestseller"><i class="fa-solid fa-crown"></i> House Special</span>
+              <span class="tag-veg">🍕 Pizza Craft</span>
+            </div>
+            <div class="sig-content">
+              <div class="sig-title-row">
+                <h3>Cinnamon Special Pizza</h3>
+                <span class="sig-price">₹300</span>
+              </div>
+              <p class="sig-desc">Chef's gourmet masterpiece loaded with premium toppings, double mozzarella blend, and signature spiced drizzle.</p>
+              <div class="sig-customer-quote">
+                <i class="fa-solid fa-quote-left"></i> "The Cinnamon Special pizza is loaded with cheese and full of rich flavor!" — Verified Guest
+              </div>
+              <button class="btn btn-sm btn-primary add-to-plate-btn" data-id="pz-8" data-name="Cinnamon Special Pizza" data-price="300" data-category="pizza">
+                <i class="fa-solid fa-plus"></i> Add to Plate
+              </button>
+            </div>
+          </div>
+
+          <!-- Dish 3 -->
+          <div class="sig-card">
+            <div class="sig-img-box">
+              <img src="unnamed (7).webp" alt="Chicken Dum Biryani" style="object-position: 20% 30%;">
+              <span class="tag-bestseller"><i class="fa-solid fa-star"></i> Royal Dum Feast</span>
+              <span class="tag-veg" style="color:#ef4444; border-color:rgba(239,68,68,0.3);">🔴 Non-Veg</span>
+            </div>
+            <div class="sig-content">
+              <div class="sig-title-row">
+                <h3>Chicken Dum Biryani</h3>
+                <span class="sig-price">₹240</span>
+              </div>
+              <p class="sig-desc">Clay-pot sealed authentic Dum Biryani cooked with fragrant saffron basmati rice, juicy marinated chicken, and royal spices.</p>
+              <div class="sig-customer-quote">
+                <i class="fa-solid fa-quote-left"></i> "Aromatic long-grain basmati biryani that satisfies every craving!"
+              </div>
+              <button class="btn btn-sm btn-primary add-to-plate-btn" data-id="by-8" data-name="Chicken Dum Biryani (Full)" data-price="240" data-category="biryani-rice">
+                <i class="fa-solid fa-plus"></i> Add to Plate
+              </button>
+            </div>
+          </div>
+
+          <!-- Dish 4 -->
+          <div class="sig-card">
+            <div class="sig-img-box">
+              <img src="images/burger_fastbites.jpg" alt="Fried Chicken Burger">
+              <span class="tag-bestseller"><i class="fa-solid fa-heart"></i> Teen Favorite</span>
+              <span class="tag-veg" style="color:#ef4444; border-color:rgba(239,68,68,0.3);">🔴 Non-Veg</span>
+            </div>
+            <div class="sig-content">
+              <div class="sig-title-row">
+                <h3>Fried Chicken Burger</h3>
+                <span class="sig-price">₹130</span>
+              </div>
+              <p class="sig-desc">Crisp golden fried chicken fillet dusted in zesty spices, layered with melted cheese, crunchy slaw, and spicy mayo.</p>
+              <div class="sig-customer-quote">
+                <i class="fa-solid fa-quote-left"></i> "Super crunchy fried chicken patty with delicious sauce."
+              </div>
+              <button class="btn btn-sm btn-primary add-to-plate-btn" data-id="bs-3" data-name="Fried Chicken Burger" data-price="130" data-category="burgers-sandwiches">
+                <i class="fa-solid fa-plus"></i> Add to Plate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLETE INTERACTIVE DIGITAL MENU SECTION -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub-title">AUTHENTIC CINNAMON CAFE & RESTRO MENU</span>
+          <h2 class="section-title">Explore Our Full Menu</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle">
+            Directly from our restaurant menu book! 120+ dishes across Momos, Burgers, Pizzas, Noodles, Biryanis, Curries & Drinks (₹15 – ₹360). Build your order tray and send it directly on WhatsApp!
+          </p>
+        </div>
+
+        <!-- Search and Diet Filter Bar -->
+        <div class="menu-control-bar">
+          <div class="menu-search-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="menuSearchInput" placeholder="Search momos, pizza, biryani, pasta, noodles, shakes, paneer, mojitos...">
+            <button class="clear-search-btn" id="clearSearchBtn" style="display:none;">&times;</button>
+          </div>
+
+          <div class="dietary-toggles">
+            <button class="diet-btn active" data-diet="all">All Items</button>
+            <button class="diet-btn" data-diet="veg"><span class="badge-veg-dot"></span> Pure Veg</button>
+            <button class="diet-btn" data-diet="nonveg"><span class="badge-nonveg-dot"></span> Non-Veg</button>
+            <button class="diet-btn" data-diet="special"><i class="fa-solid fa-star"></i> Chef's Choice</button>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs-scroll">
+          <div class="category-tabs" id="categoryTabs">
+            <button class="cat-tab active" data-category="all"><i class="fa-solid fa-border-all"></i> All Items</button>
+            <button class="cat-tab" data-category="momo"><i class="fa-solid fa-bowl-food"></i> Momo</button>
+            <button class="cat-tab" data-category="burgers-sandwiches"><i class="fa-solid fa-burger"></i> Burgers & Sandwiches</button>
+            <button class="cat-tab" data-category="rolls"><i class="fa-solid fa-scroll"></i> Kati Rolls</button>
+            <button class="cat-tab" data-category="pizza"><i class="fa-solid fa-pizza-slice"></i> Pizza</button>
+            <button class="cat-tab" data-category="noodles-pasta"><i class="fa-solid fa-utensils"></i> Noodles & Pasta</button>
+            <button class="cat-tab" data-category="starters-soups"><i class="fa-solid fa-plate-wheat"></i> Starters & Soups</button>
+            <button class="cat-tab" data-category="fish-prawn"><i class="fa-solid fa-fish"></i> Fish & Prawn</button>
+            <button class="cat-tab" data-category="biryani-rice"><i class="fa-solid fa-bowl-rice"></i> Biryani & Rice</button>
+            <button class="cat-tab" data-category="curries-gravy"><i class="fa-solid fa-fire-burner"></i> Gravy & Main Course</button>
+            <button class="cat-tab" data-category="breads"><i class="fa-solid fa-bread-slice"></i> Indian Breads</button>
+            <button class="cat-tab" data-category="beverages"><i class="fa-solid fa-mug-hot"></i> Coffee, Shakes & Drinks</button>
+            <button class="cat-tab" data-category="desserts"><i class="fa-solid fa-ice-cream"></i> Desserts</button>
+          </div>
+        </div>
+
+        <!-- Menu Items Grid -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Dynamically Rendered by JS -->
+        </div>
+
+        <!-- WhatsApp Quick Order Banner -->
+        <div class="menu-bottom-banner">
+          <div class="banner-text">
+            <h3><i class="fa-brands fa-whatsapp"></i> Want to Pre-Order for Pickup or Dine-In?</h3>
+            <p>Add items to your plate or message our team directly on WhatsApp for instant confirmation.</p>
+          </div>
+          <div class="banner-cta">
+            <button class="btn btn-primary" id="openCartFromMenuBtn">
+              <i class="fa-solid fa-utensils"></i> Review My Plate (<span id="cartCountBanner">0</span> items)
+            </button>
+            <a href="https://wa.me/919401848694?text=Hi%20Cinnamon%20Cafe,%20I%20would%20like%20to%20view%20today's%20specials%20and%20order." target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Direct WhatsApp Chat
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KIDS BIRTHDAY & CELEBRATION PACKAGES -->
+    <section class="section birthday-section" id="birthday-events">
+      <div class="container">
+        <div class="birthday-wrapper">
+          <div class="birthday-content">
+            <div class="badge-tag-festive"><i class="fa-solid fa-cake-candles"></i> SPECIAL EVENT DESTINATION</div>
+            <h2 class="section-title">Good for Kids' Birthdays & Private Celebrations</h2>
+            <div class="title-bar"></div>
+            <p class="birthday-lead">
+              Make birthdays and anniversary milestones memorable! Cinnamon Cafe & Restro provides dedicated party zones, bespoke balloon decor, custom cake arrangements, high-energy music, and kid-approved snack menus.
+            </p>
+
+            <div class="event-perks-grid">
+              <div class="event-perk">
+                <div class="perk-icon"><i class="fa-solid fa-wand-sparkles"></i></div>
+                <div>
+                  <strong>Custom Theme Decor</strong>
+                  <p>Arch balloons, fairy light backdrops, and celebration cutouts.</p>
+                </div>
+              </div>
+              <div class="event-perk">
+                <div class="perk-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+                <div>
+                  <strong>Party Combo Menus</strong>
+                  <p>Pizza slices, burgers, french fries, pasta bowls & mocktails for kids.</p>
+                </div>
+              </div>
+              <div class="event-perk">
+                <div class="perk-icon"><i class="fa-solid fa-music"></i></div>
+                <div>
+                  <strong>Surround Sound & Music</strong>
+                  <p>Play your birthday playlists or celebrate with our festive party songs.</p>
+                </div>
+              </div>
+              <div class="event-perk">
+                <div class="perk-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                <div>
+                  <strong>Instagrammable Photo Spots</strong>
+                  <p>Aesthetic cozy backdrops perfect for family photos and memories.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Package Selector -->
+            <div class="package-tiers-box">
+              <h3>Celebration Packages:</h3>
+              <div class="package-cards">
+                <div class="pkg-card" data-pkg="silver">
+                  <div class="pkg-header">
+                    <h4>Silver Bash</h4>
+                    <span class="pkg-price">₹299 <small>/ kid</small></span>
+                  </div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Standard Table Balloon Decor</li>
+                    <li><i class="fa-solid fa-check"></i> Burger / Mini Pizza + Fries + Drink</li>
+                    <li><i class="fa-solid fa-check"></i> Cake Cutting setup</li>
+                  </ul>
+                  <a href="https://wa.me/919401848694?text=Hello%20Cinnamon%20Cafe,%20I%20want%20to%20inquire%20about%20the%20Silver%20Bash%20Party%20Package." target="_blank" class="btn btn-sm btn-outline">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire Silver
+                  </a>
+                </div>
+
+                <div class="pkg-card featured" data-pkg="gold">
+                  <div class="pkg-badge">Most Popular</div>
+                  <div class="pkg-header">
+                    <h4>Golden Gala</h4>
+                    <span class="pkg-price">₹449 <small>/ kid</small></span>
+                  </div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Full Arch Balloon & Fairy Canopy</li>
+                    <li><i class="fa-solid fa-check"></i> Pasta Bowl + Burger + Fries + Shake/Mocktail</li>
+                    <li><i class="fa-solid fa-check"></i> Complimentary Birthday Cupcakes</li>
+                    <li><i class="fa-solid fa-check"></i> Dedicated Service Host</li>
+                  </ul>
+                  <a href="https://wa.me/919401848694?text=Hello%20Cinnamon%20Cafe,%20I%20want%20to%20inquire%20about%20the%20Golden%20Gala%20Party%20Package." target="_blank" class="btn btn-sm btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire Gold
+                  </a>
+                </div>
+
+                <div class="pkg-card" data-pkg="platinum">
+                  <div class="pkg-header">
+                    <h4>Grand Royal</h4>
+                    <span class="pkg-price">₹649 <small>/ kid</small></span>
+                  </div>
+                  <ul>
+                    <li><i class="fa-solid fa-check"></i> Exclusive Private Lounge Area</li>
+                    <li><i class="fa-solid fa-check"></i> All-You-Can-Eat Starters & Multi-course</li>
+                    <li><i class="fa-solid fa-check"></i> 1kg Custom Birthday Cake included</li>
+                    <li><i class="fa-solid fa-check"></i> Party Favors & Music setup</li>
+                  </ul>
+                  <a href="https://wa.me/919401848694?text=Hello%20Cinnamon%20Cafe,%20I%20want%20to%20inquire%20about%20the%20Grand%20Royal%20Party%20Package." target="_blank" class="btn btn-sm btn-outline">
+                    <i class="fa-brands fa-whatsapp"></i> Inquire Platinum
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="party-inquiry-cta">
+              <a href="https://wa.me/919401848694?text=Hello%20Cinnamon%20Cafe,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20birthday%20party/event." target="_blank" class="btn btn-primary btn-lg">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp Party Inquiry
+              </a>
+              <a href="tel:09401848694" class="btn btn-outline btn-lg">
+                <i class="fa-solid fa-phone"></i> Call Party Manager: 094018 48694
+              </a>
+            </div>
+          </div>
+
+          <div class="birthday-media">
+            <div class="party-img-container">
+              <img src="images/party_celebration.jpg" alt="Birthday Party at Cinnamon Cafe" class="party-main-img">
+              <div class="party-stats-overlay">
+                <div class="party-stat-item">
+                  <span class="num">100%</span>
+                  <span class="lbl">Hassle-Free Hosting</span>
+                </div>
+                <div class="party-stat-item">
+                  <span class="num">15-40</span>
+                  <span class="lbl">Guest Lounge Capacity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY & AMBIANCE (WITH OWNER UPLOAD INTEGRATION) -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub-title">MOMENTS & FLAVORS</span>
+          <h2 class="section-title">Inside Cinnamon Cafe & Restro</h2>
+          <div class="title-bar center"></div>
+          <p class="section-subtitle">
+            Take a visual tour of our warm wooden interiors, culinary crafts, cozy booths, and celebratory setups.
+          </p>
+        </div>
+
+        <!-- Gallery Filter Tabs & Owner Upload Trigger Button -->
+        <div class="gallery-controls-bar">
+          <div class="gallery-filter-tabs" id="galleryFilterTabs">
+            <button class="g-tab active" data-gcat="all"><i class="fa-solid fa-border-all"></i> All Photos</button>
+            <button class="g-tab" data-gcat="menu-cards"><i class="fa-solid fa-book-open"></i> Printed Menu Book</button>
+            <button class="g-tab" data-gcat="ambiance"><i class="fa-solid fa-couch"></i> Ambiance</button>
+            <button class="g-tab" data-gcat="food"><i class="fa-solid fa-utensils"></i> Dishes & Drinks</button>
+            <button class="g-tab" data-gcat="events"><i class="fa-solid fa-cake-candles"></i> Celebrations</button>
+            <button class="g-tab" data-gcat="owner"><i class="fa-solid fa-crown"></i> Owner Additions</button>
+          </div>
+
+          <button class="btn btn-primary btn-sm owner-upload-trigger" id="openOwnerUploadBtn">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Owner: Upload Restaurant Photos
+          </button>
+        </div>
+
+        <!-- Dynamic Responsive Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Populated dynamically by JavaScript (Built-in + Owner Uploads) -->
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL GOOGLE & WEB REVIEWS SECTION -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub-title">AUTHENTIC EXPERIENCES</span>
+          <h2 class="section-title">What Sribhumi Says About Us</h2>
+          <div class="title-bar center"></div>
+        </div>
+
+        <!-- Overall Score Card -->
+        <div class="review-score-summary">
+          <div class="rating-box google-box">
+            <div class="rating-logo"><i class="fa-brands fa-google"></i> Google Reviews</div>
+            <div class="score-display">
+              <span class="big-score">4.4</span>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+            <span class="count-sub">Based on 167+ verified reviews</span>
+          </div>
+
+          <div class="rating-box facebook-box">
+            <div class="rating-logo"><i class="fa-brands fa-facebook"></i> Facebook</div>
+            <div class="score-display">
+              <span class="big-score">5.0</span>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <span class="count-sub">100% Recommendation Rate</span>
+          </div>
+
+          <div class="rating-box justdial-box">
+            <div class="rating-logo"><i class="fa-solid fa-phone"></i> Justdial</div>
+            <div class="score-display">
+              <span class="big-score">5.0</span>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <span class="count-sub">161+ Customer Votes</span>
+          </div>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="reviews-slider-grid">
+          <!-- Real Review 1 -->
+          <div class="review-card">
+            <div class="rev-header">
+              <div class="rev-avatar">R</div>
+              <div class="rev-user">
+                <h4>Rohan Choudhury</h4>
+                <span class="rev-source"><i class="fa-brands fa-google"></i> Google Local Guide</span>
+              </div>
+              <div class="rev-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="rev-body">
+              "Great food in a reasonable price, lovely ambience, and very friendly staff. Station road needed a nice place like this. Their sizzling platters and mocktails are superb!"
+            </p>
+            <div class="rev-footer">
+              <span class="rev-date">Dine-in · ₹200–400</span>
+              <span class="rev-verified"><i class="fa-solid fa-circle-check"></i> Verified Visit</span>
+            </div>
+          </div>
+
+          <!-- Real Review 2 -->
+          <div class="review-card">
+            <div class="rev-header">
+              <div class="rev-avatar avatar-purple">A</div>
+              <div class="rev-user">
+                <h4>Ananya Roy</h4>
+                <span class="rev-source"><i class="fa-brands fa-google"></i> Google Reviewer</span>
+              </div>
+              <div class="rev-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="rev-body">
+              "The white sauce pasta was creamy, veggie-loaded, and quite good. Perfectly cooked with rich cheese. Highly recommend trying the cinnamon rolls with cappuccino!"
+            </p>
+            <div class="rev-footer">
+              <span class="rev-date">Dinner · ₹200–400</span>
+              <span class="rev-verified"><i class="fa-solid fa-circle-check"></i> Verified Visit</span>
+            </div>
+          </div>
+
+          <!-- Real Review 3 -->
+          <div class="review-card">
+            <div class="rev-header">
+              <div class="rev-avatar avatar-green">P</div>
+              <div class="rev-user">
+                <h4>Pradeep Deb</h4>
+                <span class="rev-source"><i class="fa-brands fa-facebook"></i> Facebook Recommendation</span>
+              </div>
+              <div class="rev-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="rev-body">
+              "Celebrated my son's 7th birthday here. The team arranged everything from balloon decor to music and kids' food boxes. Everyone enjoyed so much. Best cafe in Sribhumi."
+            </p>
+            <div class="rev-footer">
+              <span class="rev-date">Birthday Event · 25 Guests</span>
+              <span class="rev-verified"><i class="fa-solid fa-circle-check"></i> Verified Host</span>
+            </div>
+          </div>
+
+          <!-- Real Review 4 -->
+          <div class="review-card">
+            <div class="rev-header">
+              <div class="rev-avatar avatar-orange">S</div>
+              <div class="rev-user">
+                <h4>Sneha Paul</h4>
+                <span class="rev-source"><i class="fa-solid fa-phone"></i> Justdial Review</span>
+              </div>
+              <div class="rev-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="rev-body">
+              "The ambiance at night is so warm and cozy. Fast service, very clean, and prices are truly student and family friendly. Opp. Vikash textile location is super easy to reach."
+            </p>
+            <div class="rev-footer">
+              <span class="rev-date">Casual Hangout</span>
+              <span class="rev-verified"><i class="fa-solid fa-circle-check"></i> Verified Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-cta-row">
+          <button class="btn btn-outline" id="openAddReviewBtn">
+            <i class="fa-solid fa-pen-to-square"></i> Write a Review
+          </button>
+          <a href="https://www.google.com/search?q=cinnamon+cafe+%26+restro+sribhumi+reviews" target="_blank" class="btn btn-glass">
+            <i class="fa-brands fa-google"></i> Read All 167+ Google Reviews
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE POPULAR TIMES, HOURS & LOCATION MAP -->
+    <section class="section location-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-sub-title">VISIT US TODAY</span>
+          <h2 class="section-title">Location, Hours & Busy Times</h2>
+          <div class="title-bar center"></div>
+        </div>
+
+        <div class="location-grid">
+          <!-- Info Details Card -->
+          <div class="contact-info-card">
+            <h3><i class="fa-solid fa-store"></i> Cinnamon Cafe & Restro</h3>
+            <p class="subtitle">Sribhumi's Cozy Cafe & Evening Restro Destination</p>
+            
+            <div class="contact-details-list">
+              <div class="c-detail-item">
+                <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <strong>Address</strong>
+                  <p>Station Rd, near Eye Cure, opp. Vikash Textile, Sribhumi, Assam 788711</p>
+                  <a href="https://maps.google.com/?q=Cinnamon+Cafe+%26+Restro+Station+Rd+near+Eye+Cure+Sribhumi+Assam+788711" target="_blank" class="directions-link">
+                    <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps
+                  </a>
+                </div>
+              </div>
+
+              <div class="c-detail-item">
+                <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <strong>Phone & WhatsApp</strong>
+                  <p><a href="tel:09401848694">094018 48694</a> (Call & WhatsApp Orders)</p>
+                </div>
+              </div>
+
+              <div class="c-detail-item">
+                <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <strong>Opening Hours</strong>
+                  <p>Monday to Sunday: <strong>10:30 AM – 11:00 PM</strong></p>
+                  <span class="badge-status open"><i class="fa-solid fa-circle"></i> Open Daily Till 11 PM</span>
+                </div>
+              </div>
+
+              <div class="c-detail-item">
+                <div class="c-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                <div>
+                  <strong>Average Spend</strong>
+                  <p>₹200 – ₹400 per person (Reported by 50+ diners)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popular Times Chart simulation based on Google data -->
+            <div class="popular-times-widget">
+              <div class="pt-header">
+                <h4><i class="fa-solid fa-chart-column"></i> Popular Times</h4>
+                <span class="live-tag"><span class="pulse-dot"></span> Live: Peak Hours</span>
+              </div>
+              <div class="pt-day-selector" id="ptDaySelector">
+                <button class="pt-day-btn" data-day="Mon">Mon</button>
+                <button class="pt-day-btn" data-day="Tue">Tue</button>
+                <button class="pt-day-btn" data-day="Wed">Wed</button>
+                <button class="pt-day-btn" data-day="Thu">Thu</button>
+                <button class="pt-day-btn" data-day="Fri">Fri</button>
+                <button class="pt-day-btn active" data-day="Sat">Sat</button>
+                <button class="pt-day-btn" data-day="Sun">Sun</button>
+              </div>
+              <div class="pt-bars" id="ptBarsContainer">
+                <!-- Populated by JS -->
+              </div>
+              <div class="pt-footer">
+                <small><i class="fa-solid fa-info-circle"></i> People typically spend <strong>20 min to 1.5 hr</strong> here.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Map Container -->
+          <div class="map-container-card">
+            <div class="map-header">
+              <div>
+                <h4><i class="fa-solid fa-map-location-dot"></i> Interactive Map</h4>
+                <span>Station Road, Sribhumi (Karimganj)</span>
+              </div>
+              <a href="https://maps.google.com/?q=Cinnamon+Cafe+%26+Restro+Station+Rd+near+Eye+Cure+Sribhumi+Assam+788711" target="_blank" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-location-arrow"></i> Get Directions
+              </a>
+            </div>
+            
+            <div class="map-frame-wrapper">
+              <iframe 
+                src="https://maps.google.com/maps?q=Station+Rd+near+Eye+Cure+opp+Vikash+Textile+Sribhumi+Karimganj+Assam+788711&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="380" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                title="Cinnamon Cafe & Restro Map Location">
+              </iframe>
+              <div class="map-poi-badge">
+                <div class="poi-icon"><i class="fa-solid fa-utensils"></i></div>
+                <div>
+                  <strong>Cinnamon Cafe & Restro</strong>
+                  <small>Opp. Vikash Textile, Station Rd</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Service Badges -->
+            <div class="service-badges-grid">
+              <div class="svc-badge"><i class="fa-solid fa-bowl-food"></i> Dine-in Available</div>
+              <div class="svc-badge"><i class="fa-solid fa-bag-shopping"></i> Takeaway Available</div>
+              <div class="svc-badge"><i class="fa-solid fa-motorcycle"></i> WhatsApp Delivery</div>
+              <div class="svc-badge"><i class="fa-solid fa-wifi"></i> High Speed Wi-Fi</div>
+              <div class="svc-badge"><i class="fa-solid fa-square-parking"></i> Roadside Parking</div>
+              <div class="svc-badge"><i class="fa-solid fa-snowflake"></i> Air Conditioned</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <!-- Brand column -->
+        <div class="footer-col brand-col">
+          <div class="brand-logo footer-logo">
+            <div class="logo-icon-wrap">
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <div class="logo-text">
+              <span class="brand-title">CINNAMON</span>
+              <span class="brand-sub">CAFE & RESTRO</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            "Nestled in the heart of the town, Cinnamon Cafe & Restro offers the perfect blend of taste and elegance — a bustling cafe by day, a sophisticated retreat by night."
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/p/Cinnamon-Cafe-Restro-61576092035211/" target="_blank" aria-label="Facebook Page"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/919401848694" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.google.com/search?q=cinnamon+cafe+%26+restro+photos" target="_blank" aria-label="Google Business"><i class="fa-brands fa-google"></i></a>
+            <a href="https://www.justdial.com/Karimganj/Cinnamon-Cafe-Restro-Near-Eye-Cureopposite-Vikash-Textile-Longai-Road/9999P3843-3843-250812214022-T4H4_BZDET" target="_blank" aria-label="Justdial"><i class="fa-solid fa-star"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about"><i class="fa-solid fa-angle-right"></i> Our Story & Concept</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-angle-right"></i> Digital Menu & Prices</a></li>
+            <li><a href="#experience"><i class="fa-solid fa-angle-right"></i> Day Cafe vs Night Restro</a></li>
+            <li><a href="#birthday-events"><i class="fa-solid fa-angle-right"></i> Kids Birthday Packages</a></li>
+            <li><a href="#gallery"><i class="fa-solid fa-angle-right"></i> Photo Gallery & Vibes</a></li>
+            <li><a href="#reviews"><i class="fa-solid fa-angle-right"></i> 167+ Google Reviews</a></li>
+            <li><a href="javascript:void(0)" id="footerOwnerUploadBtn" style="color:var(--cinnamon-light);"><i class="fa-solid fa-camera"></i> Owner Photo Upload Studio</a></li>
+          </ul>
+        </div>
+
+        <!-- Menu Highlights -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Popular Delights</h4>
+          <ul class="footer-links">
+            <li><a href="#menu"><i class="fa-solid fa-bowl-food"></i> Steamed & Kurkure Momos</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-pizza-slice"></i> Cinnamon Special Pizza</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-bowl-rice"></i> Royal Chicken Dum Biryani</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-utensils"></i> Creamy White Sauce Pasta</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-fire"></i> Paneer Tikka & Honey Garlic Paneer</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-mug-hot"></i> Virgin Mojito & Cold Coffee</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours info -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Visit Cinnamon</h4>
+          <div class="footer-contact-items">
+            <p><i class="fa-solid fa-location-dot"></i> Station Rd, near Eye Cure, opp. Vikash Textile, Sribhumi, Assam 788711</p>
+            <p><i class="fa-solid fa-phone"></i> <a href="tel:09401848694">094018 48694</a></p>
+            <p><i class="fa-solid fa-clock"></i> Open Mon – Sun: 10:30 AM to 11:00 PM</p>
+            <p><i class="fa-solid fa-wallet"></i> ₹200 – ₹400 / person</p>
+          </div>
+          <div class="footer-cta-btn">
+            <a href="https://maps.google.com/?q=Cinnamon+Cafe+%26+Restro+Station+Rd+near+Eye+Cure+Sribhumi+Assam+788711" target="_blank" class="btn btn-sm btn-primary">
+              <i class="fa-solid fa-directions"></i> Get Route on Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          &copy; <span id="currentYear">2026</span> <strong>Cinnamon Cafe & Restro</strong>. All Rights Reserved. Sribhumi, Assam.
+        </div>
+        <div class="footer-badges">
+          <span><i class="fa-solid fa-heart text-danger"></i> Crafted for Delicious Moments</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING ACTION BUTTONS (MOBILE & DESKTOP) -->
+  <div class="floating-action-bar">
+    <a href="tel:09401848694" class="fab-btn fab-call" title="Call Cafe">
+      <i class="fa-solid fa-phone"></i>
+      <span class="fab-tooltip">Call Now</span>
+    </a>
+    <a href="https://wa.me/919401848694?text=Hello%20Cinnamon%20Cafe%20%26%20Restro,%20I%20would%20like%20to%20place%20an%20order/inquire." target="_blank" class="fab-btn fab-whatsapp" title="WhatsApp Us">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="fab-tooltip">WhatsApp Order</span>
+    </a>
+    <button class="fab-btn fab-cart" id="fabCartBtn" title="View Order Plate">
+      <i class="fa-solid fa-utensils"></i>
+      <span class="fab-badge" id="fabCartCount">0</span>
+      <span class="fab-tooltip">My Plate</span>
+    </button>
+    <button class="fab-btn fab-top" id="backToTopBtn" title="Back to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- MODAL 1: ORDER PLATE / CART DRAWER -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-content modal-cart">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Your Selected Food Plate</h3>
+        </div>
+        <button class="close-modal-btn" id="closeCartModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="cartItemsContainer" class="cart-items-list">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="cart-summary-box">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">₹0</span>
+          </div>
+          <div class="summary-row">
+            <span>Estimated Prep Time</span>
+            <span class="badge-tag">15-20 mins</span>
+          </div>
+          <div class="summary-row total-row">
+            <strong>Estimated Total</strong>
+            <strong id="cartTotal" class="price-highlight">₹0</strong>
+          </div>
+        </div>
+
+        <div class="cart-order-type">
+          <label><strong>Order Purpose:</strong></label>
+          <div class="order-type-radios">
+            <label><input type="radio" name="orderType" value="Dine-In" checked> 🍽️ Dine-In / Pre-cook</label>
+            <label><input type="radio" name="orderType" value="Takeaway"> 🛍️ Takeaway / Pickup</label>
+            <label><input type="radio" name="orderType" value="Home Delivery"> 🛵 Local Delivery</label>
+          </div>
+        </div>
+
+        <div class="cart-customer-inputs">
+          <input type="text" id="cartCustomerName" placeholder="Your Name" class="form-input">
+          <input type="text" id="cartCustomerTableOrAddress" placeholder="Table No. or Delivery Address" class="form-input mt-2">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="clearCartBtn"><i class="fa-solid fa-trash"></i> Clear</button>
+        <button class="btn btn-whatsapp" id="sendWhatsAppOrderBtn">
+          <i class="fa-brands fa-whatsapp"></i> Send Order on WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: ADD REVIEW MODAL -->
+  <div class="modal-overlay" id="addReviewModal">
+    <div class="modal-content modal-review">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <i class="fa-solid fa-star"></i>
+          <h3>Share Your Cinnamon Experience</h3>
+        </div>
+        <button class="close-modal-btn" id="closeReviewModalBtn">&times;</button>
+      </div>
+      <form id="newReviewForm">
+        <div class="modal-body">
+          <div class="star-rating-select">
+            <span>Your Overall Rating:</span>
+            <div class="interactive-stars" id="interactiveStars">
+              <i class="fa-solid fa-star active" data-rating="1"></i>
+              <i class="fa-solid fa-star active" data-rating="2"></i>
+              <i class="fa-solid fa-star active" data-rating="3"></i>
+              <i class="fa-solid fa-star active" data-rating="4"></i>
+              <i class="fa-solid fa-star active" data-rating="5"></i>
+            </div>
+            <input type="hidden" id="selectedStarRating" value="5">
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="revAuthorName">Your Name *</label>
+            <input type="text" id="revAuthorName" required placeholder="e.g. Joydeep">
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="revDishMention">Favorite Dish / Occasion</label>
+            <input type="text" id="revDishMention" placeholder="e.g. White Sauce Pasta, Spiced Latte, Birthday Party">
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="revComment">Your Review *</label>
+            <textarea id="revComment" rows="3" required placeholder="Tell others about the food, ambiance and staff..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-paper-plane"></i> Submit Feedback
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 3: OWNER RESTAURANT PHOTO UPLOAD & MANAGEMENT PORTAL -->
+  <div class="modal-overlay" id="ownerUploadModal">
+    <div class="modal-content modal-owner-upload">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="owner-header-icon"><i class="fa-solid fa-camera"></i></div>
+          <div>
+            <h3>Restaurant Owner Studio</h3>
+            <span class="owner-header-subtitle">Add & Manage Photos for Cinnamon Cafe & Restro</span>
+          </div>
+        </div>
+        <button class="close-modal-btn" id="closeOwnerModalBtn">&times;</button>
+      </div>
+
+      <!-- Step 1: Owner Verification (PIN) Screen -->
+      <div class="owner-auth-screen" id="ownerAuthScreen">
+        <div class="owner-auth-box">
+          <div class="lock-circle-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Owner Access Verification</h4>
+          <p>Please enter your 4-digit Owner PIN to upload and manage restaurant photos.</p>
+
+          <form id="ownerPinForm" class="owner-pin-form">
+            <div class="pin-input-wrap">
+              <input type="password" id="ownerPinInput" maxlength="6" placeholder="Enter PIN (Default: 1234)" autofocus required class="form-input text-center">
+            </div>
+            <div class="owner-auth-actions">
+              <button type="submit" class="btn btn-primary btn-block">
+                <i class="fa-solid fa-lock-open"></i> Unlock Owner Studio
+              </button>
+              <button type="button" class="btn btn-outline btn-block mt-2" id="quickOwnerDemoBtn">
+                <i class="fa-solid fa-key"></i> Quick Owner Access (Demo PIN: 1234)
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Step 2: Owner Upload & Management Studio (Unlocked) -->
+      <div class="owner-studio-screen" id="ownerStudioScreen" style="display: none;">
+        <!-- Studio Navigation Tabs -->
+        <div class="owner-studio-tabs">
+          <button class="owner-tab-btn active" id="tabUploadNew">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Upload New Photo
+          </button>
+          <button class="owner-tab-btn" id="tabManagePhotos">
+            <i class="fa-solid fa-images"></i> Manage Uploaded Photos (<span id="ownerUploadCount">0</span>)
+          </button>
+        </div>
+
+        <!-- Tab 1: Upload Form -->
+        <div class="owner-tab-panel" id="panelUploadNew">
+          <form id="ownerUploadForm" class="owner-form">
+            <!-- Drag & Drop Zone -->
+            <div class="owner-dropzone" id="ownerDropzone">
+              <input type="file" id="ownerFileInput" accept="image/png, image/jpeg, image/webp" style="display:none;">
+              <div class="dropzone-content">
+                <div class="dropzone-icon"><i class="fa-solid fa-images"></i></div>
+                <h4>Drag & Drop Photo Here, or <span class="browse-link">Browse Files</span></h4>
+                <p>Supports high quality JPG, PNG, and WebP (up to 10MB)</p>
+              </div>
+            </div>
+
+            <!-- Image Preview Box -->
+            <div class="upload-preview-card" id="uploadPreviewCard" style="display: none;">
+              <div class="preview-img-frame">
+                <img id="uploadPreviewImg" src="" alt="Selected Preview">
+              </div>
+              <div class="preview-meta">
+                <strong id="previewFileName">filename.jpg</strong>
+                <span id="previewFileSize">0 KB</span>
+                <button type="button" class="btn-remove-preview" id="btnRemovePreview"><i class="fa-solid fa-xmark"></i> Remove Photo</button>
+              </div>
+            </div>
+
+            <div class="form-row mt-3">
+              <div class="form-group">
+                <label for="photoTitle"><i class="fa-solid fa-heading"></i> Photo Title *</label>
+                <input type="text" id="photoTitle" required placeholder="e.g. Cozy Candlelit Evening Lounge">
+              </div>
+              <div class="form-group">
+                <label for="photoCategory"><i class="fa-solid fa-tags"></i> Category / Section *</label>
+                <select id="photoCategory" required>
+                  <option value="ambiance">Ambiance & Interiors</option>
+                  <option value="food">Signature Dishes & Coffee</option>
+                  <option value="events">Birthday & Celebrations</option>
+                  <option value="exterior">Exterior & Seating</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group mt-2">
+              <label for="photoCaption"><i class="fa-solid fa-align-left"></i> Short Caption / Story</label>
+              <textarea id="photoCaption" rows="2" placeholder="e.g. Our newly refreshed wooden booth seating under warm amber lighting!"></textarea>
+            </div>
+
+            <div class="owner-submit-row mt-3">
+              <button type="submit" class="btn btn-primary btn-block btn-lg" id="btnPublishPhoto">
+                <i class="fa-solid fa-cloud-arrow-up"></i> Publish to Live Gallery
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Tab 2: Manage Uploaded Photos List -->
+        <div class="owner-tab-panel" id="panelManagePhotos" style="display: none;">
+          <div class="manage-photos-container" id="managePhotosContainer">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: IMAGE LIGHTBOX -->
+  <div class="lightbox-overlay" id="imageLightbox">
+    <button class="close-lightbox" id="closeLightboxBtn">&times;</button>
+    <div class="lightbox-container">
+      <img src="" alt="Gallery Full View" id="lightboxImg">
+      <h4 id="lightboxTitle"></h4>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
